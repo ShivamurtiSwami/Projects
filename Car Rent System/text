@@ -1,1 +1,11 @@
+Represents a car with attributes like car ID, brand, model, base price per day, and availability.
+Provides methods for calculating rental price, checking availability, renting, and returning.
 
+Represents a customer with attributes like customer ID and name.
+
+Represents a rental transaction with a car, customer, and number of rental days.
+
+Manages a list of cars, customers, and rentals.
+Provides methods to add cars and customers, rent and return cars, and a menu for user interaction.
+
+Contains the main method where the CarRentalSystem is instantiated, cars are added, and the rental system menu is invoked.
