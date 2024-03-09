@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio-Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+         <ul class="navbar-lists">
+          <h3>Shiv Portfolio<span class="wave">&#128153;</span></h3>
+          <li><a class="navbar-link home-link" href="#" >Home</a></li>
+          <li><a class="navbar-link about-link" href="#skills">Skills</a></li>
+          <li><a class="navbar-link service-link" href="#portfolio-section">Projects</a></li>
+          <li><a class="navbar-link" href="#resume">Resume</a></li>
+          <li><a class="navbar-link" href="#contactme">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="mobile-navbar-btn">
+        <ion-icon class="mobile-nav-icon" name="menu-outline" class="mobile-nav-icon"></ion-icon>
+        <ion-icon class="mobile-nav-icon" name="close-outline" class="mobile-nav-icon"></ion-icon>
+      </div>
+    </header>
+
+    <!-- ======================================== 
+          Hero Section
+    ========================================  -->
+    <main>
+      <section class="section-hero section">
+        <div class="container grid grid-two-col">
+         
+          <div class="section-hero-data">
+            <p class="hero-top-data">Hey..! Welcome to my Portfolio<span class="wave">&#128075;</span></p>
+            <h1 class="hero-heading">I'm Shivamurti Swami</h1>
+            <p class="hero-para">A Passionate front-end developer and Full Stack Development&#128187;. I bring creativity to craft seamless digital experiences&#128161;.</p>
+            <div>
+              <a href="#contactme" class="btn hireme-btn">Hire Me</a>
+            </div>
+          </div>
+
+          <div class="section-hero-image">
+            <img src="image/full stack development img.webp" alt="hero image" class="hero-img" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ======================================== 
+           Skill Section 
+    ========================================  -->
+    <section class="section-biodata section" id="skills">
+      <div class="container grid grid-two-col" >
+        <div class="bio-image" >
+          <img src="image/skillspic.webp" alt="bio data image" />
+        </div>
+        <div class="bio-data">
+          <h2 class="common-heading">my skills</h2>
+          <hr id="skill"></hr>
+          <div class="bio-data-stats">
+           
+            <div class="bio-stats">
+              <div class="languages">
+                <ion-icon class="coding-icons" name="#"></ion-icon>
+                <h3> HTML</h3>
+              </div>
+              <div class="bio-progress-bar bio-progress-1">
+                 <!-- <span class="bio-progress-bar1">90%</span> -->
+              </div>
+            </div>
+            <div class="bio-stats">
+            <div class="languages">
+              <ion-icon class="coding-icons" name="#"></ion-icon>
+              <h3> CSS</h3>
+            </div>
+              <div class="bio-progress-bar bio-progress-2">
+                 <!-- <span class="bio-progress-bar2">80%</span> -->
+              </div>
+            </div>
+            <div class="bio-stats">
+              <div class="languages">
+                <ion-icon class="coding-icons" name="#"></ion-icon>
+                <h3> JavaScript</h3>
+              </div>
+              <div class="bio-progress-bar bio-progress-3">
+                 <!-- <span class="bio-progress-bar3">60%</span> -->
+              </div>
+            </div>
+            <div class="bio-stats">
+              <div class="languages">
+                <ion-icon class="coding-icons" name="#"></ion-icon>
+                <h3>ReactJS</h3>
+              </div>
+              <div class="bio-progress-bar bio-progress-4">
+                 <!-- <span class="bio-progress-bar4">50%</span> -->
+              </div>
+            </div>
+
+            <div class="bio-stats">
+            <div class="languages">
+              <ion-icon class="coding-icons" name="#"></ion-icon>
+              <h3>Java</h3>
+            </div>
+              <div class="bio-progress-bar bio-progress-5">
+                <!-- <span class="bio-progress-bar5">70%</span> -->
+              </div>
+            </div>
+
+            <div class="bio-stats">
+              <div class="languages">
+                <ion-icon class="coding-icons" name="#"></ion-icon>
+                <h3>MySql</h3>
+              </div>
+              <div class="bio-progress-bar bio-progress-6">
+                <!-- <span class="bio-progress-bar6">50%</span> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="bio-data-btn">
+            <a href="https://drive.google.com/file/d/1lCup9ydVwJDtCI6mNISxEOrak6lNYw-v/view?usp=sharing" class="btn" download> Downlaod CV </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================== 
+        Project Section
+    ========================================  -->
+    <section class="section-portfolio section" id="portfolio-section">
+      <div class="container">
+     <h2 class="common-heading">My Projects</h2>
+      <hr id="project"></hr>
+      </div>
+
+      <div class="container grid grid-three-col portfolio-images">
+        <div class="img-ovelay p-btn--1" >
+          <img src="image/car rent.webp" loading="lazy" alt="portfolio images "  />
+          <div class="overlay">
+            <a href="https://github.com/ShivamurtiSwami/Projects/tree/main/Car%20Rent%20System" target="_blank"  class="common-heading">Car Rent System</a>
+          </div>
+        </div>
+
+        <div class="img-ovelay p-btn--3">
+          <img src="image/portfolio.jpg" loading="lazy" alt="portfolio images " />
+          <div class="overlay">
+             <a href="https://github.com/ShivamurtiSwami/Projects/tree/main/personal%20portfolio%20website/Personal%20portfolio" target="_blank"  class="common-heading">portfolio</a>
+          </div>
+        </div>
+
+        <div class="img-ovelay p-btn--1">
+          <img src="image/hms.jpg" loading="lazy" alt="portfolio images "  />
+          <div class="overlay">
+             <a href="https://github.com/ShivamurtiSwami/Projects/tree/main/Hospital_Management_system/src" target="_blank"  class="common-heading">Hospital Management System</a>
+          </div>
+        </div>
+
+       
+
+      </div>
+    </section>
+
+    
+    
+    <!-- ======================================== 
+          Resume Section 
+    ========================================  -->
+    <section class="section-resume section " id="resume" >
+      <div class="container grid grid-two-col">
+
+        <!-- resume left side  -->
+        <div class="resume-img">
+          <img src="image/resumepic.png" class="lazy-img"/>
+        </div>
+
+        <!-- resume right side  -->
+        <div class="resume-data">
+          <h2 class="common-heading">my resume</h2>
+          <hr id="cv"></hr>
+          <p class="resume-para">Experience<span class="wave">&#128200;</span></p>
+
+          <div class="resume-data-subsection">
+            <div class="resume-data-left">
+              <h3>Website Design and Development Internship </h3>
+              <div class="grid grid-two-col">
+                <p>
+                  <ion-icon name="business-outline"></ion-icon> Internship Studio
+                </p>
+                <p>
+                  <ion-icon name="location-outline"></ion-icon> Pune, Maharashtra
+                </p>
+              </div>
+            </div>
+
+            <div class="resume-data-right">
+              <p class="resume-data-button">Work From Home</p>
+              <p>
+                <ion-icon name="calendar-outline"></ion-icon>  <span>1 Feb 2024 - 7 March 2024</span
+                > 
+              </p>
+            </div>
+          </div>
+
+          <!-- 2nd work experience  -->
+          <div class="resume-data-subsection">
+            <div class="resume-data-left">
+              <h3>Web Development (Internship)</h3>
+              <div class="grid grid-two-col">
+                <p>
+                  <ion-icon name="business-outline"></ion-icon> Dream Technology pvt
+                </p>
+                <p>
+                  <ion-icon name="location-outline"></ion-icon> Solapur, Delhi
+                </p>
+              </div>
+            </div>
+
+            <div class="resume-data-right">
+              <p class="resume-data-button">Work From Office</p>
+              <p>
+                <ion-icon name="calendar-outline"></ion-icon> 1, Dec 2022 - 31, May 2023
+              </p>
+            </div>
+          </div>
+
+          <!-- Education section  -->
+          <div class="resume-data-bottom-subsection"> 
+            <p class="resume-para">Education<span class="wave">&#128218;</span></p> 
+         
+            <!-- 1st college  -->
+            <div class="resume-data-subsection margin-small">
+              <div class="resume-data-left">
+                <h3>B.Tech in Computer Science & Engineering</h3>
+                <div class="grid grid-two-col">
+                  <p>
+                    <ion-icon name="business-outline"></ion-icon> V.V.P.I.E.T
+                  </p>
+                  <p>
+                    <ion-icon name="location-outline"></ion-icon> Solapur, Maharashtra
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume-data-right">
+                <p class="resume-data-button">B.Tech</p>
+                <p>
+                  <ion-icon name="calendar-outline"></ion-icon>  <span>Aug 2019 - Jul 2023 </span
+                  > 
+                </p>
+              </div>
+            </div>
+
+             <!-- 2nd college  -->
+            <div class="resume-data-subsection ">
+              <div class="resume-data-left">
+                <h3>HSC - Science</h3>
+                <div class="grid grid-two-col">
+                  <p>
+                    <ion-icon name="business-outline"></ion-icon> SBHSS
+                  </p>
+                  <p>
+                    <ion-icon name="location-outline"></ion-icon> jewali Dharashiv, Maharashtra
+                  </p>
+                </div>
+              </div>
+
+              <div class="resume-data-right">
+                <p class="resume-data-button"> HSC </p>
+                <p>
+                  <ion-icon name="calendar-outline"></ion-icon>  <span>Jun 2018 - May 1019 </span
+                  > 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+  <!-- ======================================== 
+        Cotnact Section   
+    ========================================  -->
+     <section class="section section-contact" id="contactme">
+        <div class="container">
+          <h2 class="common-heading">Contact Me</h2>
+          <hr id="contact"></hr>
+        </div>
+
+        <div class="section-contact-main contact-container">
+          <form action="https://getform.io/f/panrryza" method="POST">
+            <div class=" grid grid-two-col">
+              <input type="text" name="username" id="" required placeholder="Name" autocomplete="off">
+              <input type="email" name="email" required placeholder="Email" autocomplete="off">
+            </div>
+            <div class=" grid grid-two-col">
+              <input type="number" name="mobile" placeholder="Mobile" autocomplete="off">
+              <input type="text" name="subject" placeholder="Subject" autocomplete="off">
+            </div>
+             <div>
+               <textarea name="message" id="" placeholder="Message" autocomplete="off"></textarea>
+             </div>
+
+             <div>
+               <input type="submit" value="send" class="btn">
+             </div>
+          </form>
+        </div>
+      </section>
+
+   <!-- ======================================== 
+      Footer Section   
+    ========================================  -->
+
+    <footer class="section-footer">
+        <div class="f-address"> 
+          <h3>Get In Touch..!</h3>
+           <div>
+              <p>  <span><ion-icon name="location-outline"></ion-icon></span> Dharashiv(Osmanabad), Maharashtra, India </p>
+           </div>
+
+            <div>
+              <p>  <span><ion-icon name="call-outline"></ion-icon></span> +91 9359688243 </a></p>
+            </div>
+
+            <div>
+              <p>  <span><ion-icon name="mail-outline"></ion-icon></span> swamishivmurti1111@gmail.com </a> </p>
+            </div>
+        </div>
+
+        <div class="f-social-icons">
+            <a href="https://www.facebook.com/shivmurti.swami.52" target="_blank">
+              <ion-icon class="icons" name="logo-facebook"></ion-icon>
+            </a>
+
+            <a href="https://www.instagram.com/s_shiv09/" target="_blank">
+              <ion-icon class="icons" name="logo-instagram"></ion-icon>
+            </a>
+
+            <a href="https://www.linkedin.com/in/swamishivamurti/" target="_blank">
+              <ion-icon class="icons" name="logo-linkedin"></ion-icon>
+            </a>
+
+            <a href="https://github.com/ShivamurtiSwami" target="_blank">
+              <ion-icon class="icons" name="logo-github"></ion-icon>
+            </a>
+         </div>
+
+        <div class="f-credits">
+          <p>Copyright ©2024. All rights reserved |<span id=""></span></p>
+        </div>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<scriptnomodul src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></scriptnomodul>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="index.js"></script>
+  </body>
+</html>
