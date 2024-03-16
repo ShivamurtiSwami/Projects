@@ -23,12 +23,14 @@ public class HospitalManagementSystem {
 	            Patient patient = new Patient(connection, scanner);
 	            Doctor doctor = new Doctor(connection);
 	            while(true){
+	            	System.out.println("****************Welocome to Hospital management System***************");
 	                System.out.println("HOSPITAL MANAGEMENT SYSTEM ");
 	                System.out.println("1. Add Patient");
 	                System.out.println("2. View Patients");
 	                System.out.println("3. View Doctors");
 	                System.out.println("4. Book Appointment");
-	                System.out.println("5. Exit");
+	                System.out.println("5. Delete Existing Patient");
+	                System.out.println("6. Exit");
 	                System.out.println("Enter your choice: ");
 	                int choice = scanner.nextInt();
 
@@ -54,6 +56,10 @@ public class HospitalManagementSystem {
 	                        System.out.println();
 	                        break;
 	                    case 5:
+	                        deletePatient(patient, connection, scanner);
+	                        System.out.println();
+	                        break;
+	                    case 6:
 	                        System.out.println("THANK YOU! FOR USING HOSPITAL MANAGEMENT SYSTEM!!");
 	                        return;
 	                    default:
@@ -99,6 +105,11 @@ public class HospitalManagementSystem {
 	        }else{
 	            System.out.println("Either doctor or patient doesn't exist!!!");
 	        }
+	    }
+	    public static void deletePatient(Patient patient, Connection connection, Scanner scanner) {
+	        System.out.print("Enter Patient Id to delete: ");
+	        int patientIdToDelete = scanner.nextInt();
+	        patient.deletePatientById(patientIdToDelete);
 	    }
 
 	    public static boolean checkDoctorAvailability(int doctorId, String appointmentDate, Connection connection){
