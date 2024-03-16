@@ -14,12 +14,10 @@ public class Patient {
 	    }
 
 	    public void addPatient(){
-	        System.out.print("Enter Patient Name: ");
-	        String name = scanner.next();
-	        System.out.print("Enter Patient Age: ");
-	        int age = scanner.nextInt();
-	        System.out.print("Enter Patient Gender: ");
-	        String gender = scanner.next();
+	    	 System.out.print("Enter Patient Name: ");
+	         String name = scanner.next();
+	         int age = getValidAge(scanner);
+	         String gender = getValidGender(scanner);
 
 	        try{
 	            String query = "INSERT INTO patient(name, age, gender) VALUES(?, ?, ?)";
@@ -58,7 +56,7 @@ public class Patient {
 	            }
 
 	        }catch (SQLException e){
-	            e.printStackTrace();
+	            System.out.println("An error occurred while fetching patient data: " + e.getMessage());
 	        }
 	    }
 
@@ -74,10 +72,60 @@ public class Patient {
 	                return false;
 	            }
 	        }catch (SQLException e){
-	            e.printStackTrace();
+	        	System.out.println("An error occurred while querying the database: " + e.getMessage());
 	        }
 	        return false;
 	    }
+	    
+	    public void deletePatientById(int id) {
+	        String query = "DELETE FROM patient WHERE id = ?";
+	        try {
+	            PreparedStatement preparedStatement = connection.prepareStatement(query);
+	            preparedStatement.setInt(1, id);
+	            int affectedRows = preparedStatement.executeUpdate();
+	            if (affectedRows > 0) {
+	                System.out.println("Patient with ID " + id + " deleted successfully.");
+	            } else {
+	                System.out.println("No patient found with ID " + id + ".");
+	            }
+	        } catch (SQLException e) {
+	        	System.out.println("An error occurred while querying the database: " + e.getMessage());
+	        }
+	    }
+	    
+	    private int getValidAge(Scanner scanner) {
+	        int age;
+	        while (true) {
+	            System.out.print("Enter Patient Age: ");
+	            if (scanner.hasNextInt()) {
+	                age = scanner.nextInt();
+	                if (age > 0) {
+	                    break;
+	                } else {
+	                    System.out.println("Age must be a positive integer.");
+	                }
+	            } else {
+	                System.out.println("Invalid input. Age must be a positive integer.");
+	                scanner.next(); // Consume invalid input
+	            }
+	        }
+	        return age;
+	    }
 
+	    private String getValidGender(Scanner scanner) {
+	        String gender;
+	        while (true) {
+	            System.out.print("Enter Patient Gender: ");
+	            gender = scanner.next().trim().toLowerCase();
+	            if (gender.equals("male") || gender.equals("female") || gender.equals("other")) {
+	                break;
+	            } else {
+	                System.out.println("Invalid gender. Please enter 'male', 'female', or 'other'.");
+	            }
+	        }
+	        return gender;
+	    }
+	    
+	    
 	}
 
